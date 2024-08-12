@@ -6,23 +6,18 @@ const categories = [
   },
   {
     id: '2',
-    datafilter: '.apps',
-    name: 'Apps'
-  },
-  {
-    id: '3',
-    datafilter: '.template',
-    name: 'Template'
+    datafilter: '.webApps',
+    name: 'Web Apps'
   },
   {
     id: '4',
-    datafilter: '.ios',
-    name: 'IOS'
+    datafilter: '.mobile',
+    name: 'Mobile'
   },
   {
     id: '5',
-    datafilter: '.graphic',
-    name: 'Graphic'
+    datafilter: '.deepLearning',
+    name: 'Deep Learning'
   },
 ];
 // id="category-list"
@@ -39,7 +34,7 @@ const projects = [
   {
     id: '1',
     name: 'KTK Shop',
-    category: 'apps',
+    category: 'webApps',
     date: 'May 2022 - July 2022',
     course: 'Project Web',
     image: 'Picture2.png',
@@ -51,7 +46,7 @@ const projects = [
   {
     id: '2',
     name: 'ATN Toys Store',
-    category: 'apps',
+    category: 'webApps',
     date: 'July 2022 - October 2022',
     course: 'Cloud Computing',
     image: 'Picture3.png',
@@ -63,7 +58,7 @@ const projects = [
   {
     id: '3',
     name: 'FPT Book Store ',
-    category: 'apps',
+    category: 'webApps',
     date: 'January 2023 - March 2023',
     course: 'Application Development',
     image: 'Picture4.jpg',
@@ -75,7 +70,7 @@ const projects = [
   {
     id: '4',
     name: 'M-HIKE',
-    category: 'apps',
+    category: 'mobile',
     date: 'August 2023 - November 2023',
     course: 'Mobile Application Design and Development',
     image: 'Picture5.png',
@@ -87,7 +82,7 @@ const projects = [
   {
     id: '6',
     name: 'Annual University Magazine',
-    category: 'apps',
+    category: 'webApps',
     date: 'Feb 2024 - Apr 2024',
     course: 'Enterprise Web Software Development',
     image: 'Picture1.png',
@@ -99,7 +94,7 @@ const projects = [
   {
     id: '7',
     name: 'A tumor diagnosis system through mri images using deep learning',
-    category: 'apps',
+    category: 'deepLearning',
     date: 'August 2023 - May 2024',
     course: 'Final Year Project',
     image: 'Picture6.png',
