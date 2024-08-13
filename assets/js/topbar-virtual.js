@@ -300,73 +300,6 @@ $(document).ready(function () {
 
 });
 
-// $(document).ready(function () {
-//   $('#sideel').click(function () {
-//     $(this).parents('.config').toggleClass('active');
-//   });
-
-//   $('body').data('bodyClassList', '');
-
-//   $('.color-item').click(function () {
-//     var cls = $(this).data('class');
-
-//     $('body').attr('class', $('body').data('bodyClassList'));
-//     $('body').addClass(cls);
-//   });
-
-//   $('#change-page').on('change', function () {
-//     var url = $(this).val() + '.html';
-
-//     if ($(this).val()) {
-//       window.location.assign(url);
-//     }
-//   });
-
-//   $('[data-animate="scrolling"]').each(function () {
-//     var self = $(this);
-//     var target = $(this).data('target') ? $(this).data('target') : $(this).attr('href');
-
-//     self.click(function (e) {
-//       $('body, html').animate({ scrollTop: $(target).offset().top }, 1000);
-//       return false;
-//     });
-//   });
-// });
-
-
-/*
- *  Counter
- *
- *  Require(" jquery.animateNumber.min.js ", " jquery.waypoints.min.js ")
- */
-// $(document).ready(function () {
-//   var counterInit = function () {
-//     if ($('.section-counter').length > 0) {
-//       $('.section-counter').waypoint(function (direction) {
-
-//         if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-
-//           var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-//           $('.number').each(function () {
-//             var $this = $(this),
-//               num = $this.data('number');
-//             $this.animateNumber(
-//               {
-//                 number: num,
-//                 numberStep: comma_separator_number_step
-//               }, 5000
-//             );
-//           });
-
-//         }
-
-//       }, { offset: '95%' });
-//     }
-
-//   }
-//   counterInit();
-// });
-
 $(document).ready(function () {
   $("#downloadBtn").click(function () {
     cvPath = '../assets/CV/CV-TruongVanTuanKiet-WebDeveloper.pdf'
@@ -396,8 +329,25 @@ $(document).ready(function () {
       mess: message
     };
 
-    postGoogleFrom(data);
+    // postGoogleFrom(data);
+    showModal();
   });
+
+  function showModal() {
+    const popupModal = `<span class="overlay"></span>
+                        <div class="modal-box">
+                          <i class="fa-regular fa-circle-check"></i>
+                          <h2>Completed</h2>
+                          <h3>You have sucessfully downloaded all the source code files.</h3>
+                          <div class="buttons">
+                            <button class="close-btn">Ok, Close</button>
+                          </div>
+                        </div>`
+    $('body').append(popupModal);
+    $('.close-btn').click(function () {
+      $('.overlay, .modal-box').remove();
+    });
+  }
 
   async function postGoogleFrom(data) {
     const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfbI15LJ2Ob2WJC79XeN9d3NStEa1LAluDAqcUSgCpGiUUAJQ/formResponse';
